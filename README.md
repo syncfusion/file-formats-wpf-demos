@@ -51,13 +51,13 @@ The easiest way to use these samples without using Git is to download the zip fi
   </tr>
   <tr>
   <td>
-    <a href="PDF.WPF/Samples">PDF library</a>
+    <a href="PDF">PDF library</a>
   </td>
   <td>
-    <a href="PDF.WPF/Samples/Import and Export">PDF Converters</a>
+    <a href="PDF/Import and Export">PDF Converters</a>
   </td>
   <td>
-    <a href="PdfViewer.WPF/Samples">PDF Viewer</a>
+    <a href="PdfViewer">PDF Viewer</a>
   </td>
   </tr>
   <tr>
@@ -67,10 +67,10 @@ The easiest way to use these samples without using Git is to download the zip fi
   </tr>
   <tr>
   <td>
-    <a href="XlsIO.WPF/Samples">Excel library</a>
+    <a href="XlsIO">Excel library</a>
   </td>
   <td>
-    <a href="XlsIO.WPF/Samples/Export">Excel Converters</a>
+    <a href="XlsIO/Export">Excel Converters</a>
   </td>
   <td/>
   </tr>
@@ -81,13 +81,13 @@ The easiest way to use these samples without using Git is to download the zip fi
   </tr>
   <tr>
   <td>
-    <a href="DocIO.WPF/Samples">Word library</a>
+    <a href="DocIO">Word library</a>
   </td>
   <td>
-    <a href="DocIO.WPF/Samples/Import and Export">Word converters</a>
+    <a href="DocIO/Import and Export">Word converters</a>
   </td>
   <td>
-    <a href="SfRichTextBoxAdv.WPF/Samples">RichTextBox</a>
+    <a href="RichTextBox">RichTextBox</a>
   </td>
   </tr>
   <tr>
@@ -97,10 +97,10 @@ The easiest way to use these samples without using Git is to download the zip fi
   </tr>
   <tr>
   <td>
-    <a href="Presentation.WPF/Samples">PowerPoint library</a>
+    <a href="Presentation">PowerPoint library</a>
   </td>
   <td>
-    <a href="Presentation.WPF/Samples/Conversion">PowerPoint converters</a>
+    <a href="Presentation/Conversion">PowerPoint converters</a>
   </td>
   <td/>
   </tr>
