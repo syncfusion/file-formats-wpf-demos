@@ -57,7 +57,7 @@ The easiest way to use these samples without using Git is to download the zip fi
     <a href="PDF/Import and Export">PDF Converters</a>
   </td>
   <td>
-    <a href="PdfViewer">PDF Viewer</a>
+    <a href="Pdf%20Viewer">PDF Viewer</a>
   </td>
   </tr>
   <tr>
@@ -72,7 +72,9 @@ The easiest way to use these samples without using Git is to download the zip fi
   <td>
     <a href="XlsIO/Export">Excel Converters</a>
   </td>
-  <td/>
+  <td>
+  <a href="Spreadsheet">Spreadsheet</a>
+  </td>
   </tr>
   <tr>
     <td colspan="3" rowspan="1">
