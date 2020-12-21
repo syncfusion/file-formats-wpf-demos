@@ -48,6 +48,12 @@ namespace syncfusion.demoscommon.wpf
     {
         public MainWindow(DemoBrowserViewModel viewModel)
         {
+#if DEBUG
+            if (DemoBrowserViewModel.CanAutomate)
+            {
+                BindingErrorListener.Listen(errorMessage => OnBindingError(errorMessage, viewModel));
+            }
+#endif
             InitializeComponent();
             this.DataContext = viewModel;
             DemosNavigationService.MainWindow = this;
@@ -55,7 +61,28 @@ namespace syncfusion.demoscommon.wpf
             DemosNavigationService.RootNavigationService.Navigate(new ProductsListView() { DataContext = viewModel });
             this.ROOTFRAME.NavigationService.Navigated += NavigationService_Navigated;
             this.Loaded += MainWindow_Loaded;
+            
         }
+
+
+#if DEBUG
+        /// <summary>
+        /// Helps to log the Binding Error
+        /// </summary>
+        private void OnBindingError(string errorMessage, DemoBrowserViewModel viewModel)
+        {
+            if (viewModel.SelectedProduct != null && viewModel.SelectedSample != null)
+            {
+                ErrorLogging.LogBindingError(viewModel.SelectedProduct.Product + "\\" + viewModel.SelectedSample.SampleName + "\\" + errorMessage);
+            }
+            else if (viewModel.SelectedShowcaseSample != null)
+            {
+                ErrorLogging.LogBindingError("Showcase\\" + viewModel.SelectedShowcaseSample.SampleName + "\\" + errorMessage);
+            }
+            else
+                ErrorLogging.LogBindingError(errorMessage);
+        }
+#endif
 
         /// <summary>
         ///  Occurs when the element is laid out, rendered, and ready for interaction.

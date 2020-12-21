@@ -27,6 +27,11 @@
     TitleFontSize="24"
     WindowState="Maximized"
     mc:Ignorable="d">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding WindowLoadedCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <syncfusion:ChromelessWindow.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -56,7 +61,7 @@
                     FontSize="14"
                     FontWeight="SemiBold"
                     Foreground="#B3ffffff">
-                    2020  Vol 3 
+                    2020  Vol 4 
                 </Span>
             </TextBlock>
         </listCollection:ArrayList>

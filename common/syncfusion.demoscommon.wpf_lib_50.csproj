@@ -31,14 +31,10 @@
     <Page Remove="obj_45\**" />
     <Page Remove="obj_47\**" />
     <Page Remove="obj_50\**" />
-    <None Remove="Assets\Common\Data\OfflineCube\Adventure_Works_Ext.cub" />
-    <None Include="Assets\Common\Data\OfflineCube\Adventure_Works_Ext.cub" />
-    <None Remove="Assets\Common\Data\OfflineCube\Sales DB.cub" />
-    <None Include="Assets\Common\Data\OfflineCube\Sales DB.cub" />
-    <None Remove="Assets\Common\Data\Sales DB.xls" />
-    <None Include="Assets\Common\Data\Sales DB.xls" />
-    <None Remove="Assets\Config\OLAPSample.config" />
-    <None Include="Assets\Config\OLAPSample.config" />
+    <None Remove="Assets\Olap\Data\Sales DB.xls" />
+    <None Include="Assets\Olap\Data\Sales DB.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Remove="Properties\Settings.settings" />
     <None Include="Properties\Settings.settings" />
     <None Remove="Assets\ToolBarIcons\Properties.png" />
@@ -169,8 +165,28 @@
     <Resource Include="Assets\App.ico" />
     <None Remove="Assets\error.png" />
     <Resource Include="Assets\error.png" />
-    <None Remove="Assets\Common\Data\CubeModelTemplates\ReportDefenitionFile.xml" />
-    <Resource Include="Assets\Common\Data\CubeModelTemplates\ReportDefenitionFile.xml" />
+    <None Remove="Assets\Music\Image1.png" />
+    <Resource Include="Assets\Music\Image1.png" />
+    <None Remove="Assets\Music\Image10.png" />
+    <Resource Include="Assets\Music\Image10.png" />
+    <None Remove="Assets\Music\Image11.png" />
+    <Resource Include="Assets\Music\Image11.png" />
+    <None Remove="Assets\Music\Image2.png" />
+    <Resource Include="Assets\Music\Image2.png" />
+    <None Remove="Assets\Music\Image3.png" />
+    <Resource Include="Assets\Music\Image3.png" />
+    <None Remove="Assets\Music\Image4.png" />
+    <Resource Include="Assets\Music\Image4.png" />
+    <None Remove="Assets\Music\Image5.png" />
+    <Resource Include="Assets\Music\Image5.png" />
+    <None Remove="Assets\Music\Image6.png" />
+    <Resource Include="Assets\Music\Image6.png" />
+    <None Remove="Assets\Music\Image7.png" />
+    <Resource Include="Assets\Music\Image7.png" />
+    <None Remove="Assets\Music\Image8.png" />
+    <Resource Include="Assets\Music\Image8.png" />
+    <None Remove="Assets\Music\Image9.png" />
+    <Resource Include="Assets\Music\Image9.png" />
     <None Remove="Assets\Gadgets\One_X.png" />
     <Resource Include="Assets\Gadgets\One_X.png" />
     <None Remove="Assets\Gadgets\Pavilion_G6.png" />
@@ -201,8 +217,32 @@
     <Resource Include="Assets\yes.png" />
     <None Remove="Assets\Gadgets\Yoga.png" />
     <Resource Include="Assets\Gadgets\Yoga.png" />
-    <None Remove="Assets\Common\Data\OfflineCube\ReportsTable.sdf" />
-    <Content Include="Assets\Common\Data\OfflineCube\ReportsTable.sdf">
+    <None Remove="Pdfium\x64\pdfium.dll" />
+    <Content Include="Pdfium\x64\pdfium.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Remove="Pdfium\x86\pdfium.dll" />
+    <Content Include="Pdfium\x86\pdfium.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Remove="Assets\Config\OLAPSample.config" />
+    <Content Include="Assets\Config\OLAPSample.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Remove="Assets\Olap\Data\OfflineCube\Adventure_Works_Ext.cub" />
+    <Content Include="Assets\Olap\Data\OfflineCube\Adventure_Works_Ext.cub">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Remove="Assets\Olap\Data\OfflineCube\Sales DB.cub" />
+    <Content Include="Assets\Olap\Data\OfflineCube\Sales DB.cub">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Remove="Assets\Olap\Data\CubeModelTemplates\ReportDefenitionFile.xml" />
+    <Content Include="Assets\Olap\Data\CubeModelTemplates\ReportDefenitionFile.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Remove="Assets\Olap\Data\OfflineCube\ReportsTable.sdf" />
+    <Content Include="Assets\Olap\Data\OfflineCube\ReportsTable.sdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Remove="Assets\Northwind.sdf" />

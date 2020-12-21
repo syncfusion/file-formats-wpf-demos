@@ -51,11 +51,14 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyResolver.cs" />
+    <Compile Include="Helper\AssemblyResolver.cs" />
     <Compile Include="Behaviors\LaunchDemoAction.cs" />
+    <Compile Include="Behaviors\LaunchShowcaseDemoAction.cs" />
     <Compile Include="Behaviors\OpenSourceCodeAction.cs" />
     <Compile Include="Behaviors\ProductsListBehavior.cs" />
     <Compile Include="Behaviors\ScrollToSelectedItemAction.cs" />
+    <Compile Include="Behaviors\NavigateHomePageAction.cs" />
+    <Compile Include="Helper\BindingError.cs" />
     <Compile Include="Converter\BoolToObjectConverter.cs" />
     <Compile Include="Converter\CollectionVisibilityConverter.cs" />
     <Compile Include="Converter\EmptyCollectionToObjectConverter.cs" />
@@ -71,6 +74,9 @@
     <Compile Include="Converter\BoolNegationConverter.cs" />
     <Compile Include="Converter\BooleanToVisibilityConverter.cs" />
     <Compile Include="MVVM\NotificationObject.cs" />
+    <Compile Include="SyntaxHelper\SourceCodeViewer.cs" />
+    <Compile Include="SyntaxHelper\SyntaxHighlighterXAML.cs" />
+    <Compile Include="SyntaxHelper\SyntaxHighlighterCSharp.cs" />
     <Compile Include="ViewModel\SampleBrowserViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -106,20 +112,46 @@
     <Compile Include="Views\ProductsListView.xaml.cs">
       <DependentUpon>ProductsListView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ShowcaseDemos.xaml.cs">
+      <DependentUpon>ShowcaseDemos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SourceCodeTabView.xaml.cs">
+      <DependentUpon>SourceCodeTabView.xaml</DependentUpon>
+    </Compile>
+    <Content Include="Pdfium\x64\pdfium.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pdfium\x86\pdfium.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Assets\Common\Data\OfflineCube\Adventure_Works_Ext.cub" />
-    <None Include="Assets\Common\Data\OfflineCube\Sales DB.cub" />
-    <None Include="Assets\Common\Data\Sales DB.xls" />
-    <None Include="Assets\Config\OLAPSample.config" />
+    <Content Include="Assets\Config\OLAPSample.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Olap\Data\OfflineCube\Adventure_Works_Ext.cub">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Olap\Data\OfflineCube\Sales DB.cub">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Assets\Olap\Data\Sales DB.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Olap\Data\CubeModelTemplates\ReportDefenitionFile.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Olap\Data\OfflineCube\ReportsTable.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Assets\ToolBarIcons\Properties.png" />
     <Resource Include="Assets\ToolBarIcons\AlignTextCenter.png" />
     <Resource Include="Assets\ToolBarIcons\AlignTextLeft.png" />
@@ -184,10 +216,17 @@
     <Resource Include="Assets\no.png" />
     <Resource Include="Assets\App.ico" />
     <Resource Include="Assets\error.png" />
-    <Resource Include="Assets\Common\Data\CubeModelTemplates\ReportDefenitionFile.xml" />
-    <Content Include="Assets\Common\Data\OfflineCube\ReportsTable.sdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Resource Include="Assets\Music\Image1.png" />
+    <Resource Include="Assets\Music\Image10.png" />
+    <Resource Include="Assets\Music\Image11.png" />
+    <Resource Include="Assets\Music\Image2.png" />
+    <Resource Include="Assets\Music\Image3.png" />
+    <Resource Include="Assets\Music\Image4.png" />
+    <Resource Include="Assets\Music\Image5.png" />
+    <Resource Include="Assets\Music\Image6.png" />
+    <Resource Include="Assets\Music\Image7.png" />
+    <Resource Include="Assets\Music\Image8.png" />
+    <Resource Include="Assets\Music\Image9.png" />
     <Content Include="Assets\Northwind.sdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -239,6 +278,14 @@
     <Page Include="Views\ProductsListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShowcaseDemos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SourceCodeTabView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
